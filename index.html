@@ -1,18 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Закрывающий тег</title>
+        <link rel="icon" href="./images/favicon.ico" sizes="any" />
+        <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+        <link rel="stylesheet" href="./fonts/fonts.css" />
+        <link rel="stylesheet" href="./styles/variables.css" />
+        <link rel="stylesheet" href="./styles/globals.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/animations.css" />
+    </head>
+    <body class="page">
+        <header class="header content-block">
+            <span class="header__logo-text">&lt;/HTML&gt;</span>
+            <h1 class="header__title">закрывающий тег</h1>
+        </header>
+        <main class="main content-block">
+            <ul class="main__card-list">
+                <li class="main__card-item">
+                    <article class="card">
+                        <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+                        <picture>
+                            <source
+                                srcset="./images/sprint-00-van.avif"
+                                type="image/avif"
+                            />
+                            <source
+                                srcset="./images/sprint-00-van.webp"
+                                type="image/webp"
+                            />
+                            <img
+                                class="card__image"
+                                src="./images/sprint-00-van.jpg"
+                                alt="Фургон"
+                            />
+                        </picture>
+                        <div class="card__content">
+                            <p>
+                                Это было самое начало пути. На этом этапе важно
+                                было проникнуться основами и настроиться на
+                                учёбу. И, возможно, подумать, как новые знания
+                                могут повлиять на ваше будущее.
+                            </p>
+                            <p>
+                                Место для ваших воспоминаний о начале обучения.
+                            </p>
+                            <button
+                                type="button"
+                                class="button card__icon-button"
+                            >
+                                <svg
+                                    class="like-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="27"
+                                    height="24"
+                                    fill="none"
+                                    viewBox="0 0 27 24"
+                                >
+                                    <path
+                                        fill="#000"
+                                        d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z"
+                                    />
+                                </svg>
+                                <span class="button__text">Like</span>
+                            </button>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </main>
+        <script src="./scripts/like.js"></script>
+    </body>
 </html>

@@ -23,6 +23,10 @@
   padding-block: 100px;
 }
 
+.page:has(.download-window[open]) {
+  overflow: hidden;
+}
+
 .content-block {
   inline-size: var(--content-inline-size);
   margin: 0 auto;
@@ -173,9 +177,14 @@
   padding-block: 12px;
 }
 
+.like-icon {
+  fill: #000;
+  /* stroke: #000; */
+  /* stroke-width: 1px; */
+}
+
 .download-button {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 8px;
   padding-inline: 18px;
@@ -184,19 +193,24 @@
 }
 
 .floppy-icon {
-  block-size: 28px;
-  inline-size: 28px;
+  block-size: 21px;
+  inline-size: 21px;
 }
 
 .download-window[open] {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-block: 30px;
-  padding-inline: 40px;
+  gap: 28px;
+  padding-block: 28px;
+  padding-inline: 28px;
   inline-size: var(--download-window-inline-size);
   border: 2px solid #000;
   border-radius: 0;
+}
+
+.download-window[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+  /* backdrop-filter: blur(7px); */
 }
 
 .download-window__content {
@@ -209,7 +223,7 @@
   text-transform: uppercase;
 }
 
-.download-window__floppy-icon {
+.download-window__content .floppy-icon {
   flex-shrink: 0;
   /* color: palevioletred; */
   block-size: 39px;
@@ -226,9 +240,17 @@
 } */
 
 
-.like-icon {
-  fill: #000;
-  /* stroke: #000; */
-  /* stroke-width: 1px; */
-}
+@media (width < 376px) {
+  .download-window[open] {
+    padding-inline: 38px;
+  }
 
+  .download-button {
+    flex-direction: column;
+  }
+
+  .floppy-icon {
+  block-size: 28px;
+  inline-size: 28px;
+}
+}

@@ -74,12 +74,67 @@
   padding-inline: 10px;
 }
 
+.card__image-wrapper {
+  position: relative;
+  border-block: 2px solid #000;
+  overflow: hidden;
+}
+
+.card__image-label {
+  position: absolute;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+  opacity: .5;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--image-label-color, #fff);
+  z-index: 1;
+}
+
+@supports (text-stroke: 1px #fff) {
+  .card__image-label {
+     text-stroke: 1px var(--image-label-color, #fff);
+  }
+}
+
 .card__image {
   display: block;
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  border-block: 2px solid #000;
+  /* border-block: 2px solid #000; */
+}
+
+.sprint01-start-image {
+  filter: saturate(25%);
+}
+
+.sprint01-end-image {
+  filter: saturate(300%);
+}
+
+.sprint02-start-image {
+  filter: hue-rotate(40deg);
+}
+
+.sprint02-end-image {
+  filter: invert(0.8);
+}
+
+.sprint03-start-image {
+  filter: sepia(90%);
+}
+
+.sprint03-end-image {
+  filter: blur(20px);
+}
+
+.now-im-here-image {
+  --var: 0.5;
+  /* filter: blur(2px) hue-rotate(100deg); */
+  /* filter: hue-rotate(100deg) invert(calc(var(--var) / 2)) brightness(calc(1 + var(--var))) blur(2px); */
+  filter: hue-rotate(100deg) invert(0.25) brightness(calc(1.5)) blur(2px);
 }
 
 .card__content {
@@ -88,6 +143,7 @@
   flex-direction: column;
   gap: 25px;
   line-height: 116%;
+  /* font-variation-settings: 'wght' var(--page-wght, 410); */
 }
 
 .card__icon-button {
@@ -96,7 +152,7 @@
 
 .button {
   border: 2px solid #000;
-  font-family: var(--accent-font, PressStartP2);
+  font-family: var(--accent-font, PressStartP2), sans-serif;
   font-size: 14px;
   cursor: pointer;
   background-color: #fff;
@@ -128,9 +184,41 @@
 }
 
 .floppy-icon {
-  width: 28px;
-  height: 28px;
-  color: green;
+  block-size: 28px;
+  inline-size: 28px;
+}
+
+.download-window[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-block: 30px;
+  padding-inline: 40px;
+  inline-size: var(--download-window-inline-size);
+  border: 2px solid #000;
+  border-radius: 0;
+}
+
+.download-window__content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-family: var(--accent-font, PressStartP2), sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.download-window__floppy-icon {
+  flex-shrink: 0;
+  /* color: palevioletred; */
+  block-size: 39px;
+  inline-size: 39px;
+}
+
+.button__ok {
+  padding-block: 12.5px;
+  text-transform: uppercase;
 }
 
 /* .footer {
@@ -138,9 +226,9 @@
 } */
 
 
-/* .like-icon {
-  width: 27px;
-  height: 24px;
-  fill: none;
-} */
+.like-icon {
+  fill: #000;
+  /* stroke: #000; */
+  /* stroke-width: 1px; */
+}
 

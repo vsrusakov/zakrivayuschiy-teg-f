@@ -13,4 +13,6 @@
   --header-logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
   --header-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --header-padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  --image-label-color: #fff;
+  --download-window-inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
 }

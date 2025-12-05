@@ -154,7 +154,8 @@
 }
 
 .card__content {
-  padding: 25px;
+  /* padding: 25px; */
+  margin: 25px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -163,6 +164,8 @@
 }
 
 .card__footer {
+  margin-inline: 25px;
+  margin-block-end: 25px;
   border: none;
   display: flex;
   justify-content: flex-end;

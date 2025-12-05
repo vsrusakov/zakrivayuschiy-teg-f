@@ -37,12 +37,21 @@
   border: 2px solid #000;
   cursor: pointer;
   background-color: #fff;
+  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
   font-family: var(--accent-font, PressStartP2), sans-serif;
   font-size: 14px;
   line-height: 90%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 currentColor;
 }
 
 .header {

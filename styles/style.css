@@ -210,9 +210,10 @@
 }
 
 .download-window[open] {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 30px 20px;
+  align-items: center;
   padding-block: 28px;
   padding-inline: 28px;
   inline-size: var(--download-window-inline-size);
@@ -224,10 +225,7 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.download-window__content {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+.download-window__text {
   font-family: var(--accent-font, PressStartP2), sans-serif;
   font-size: 14px;
   line-height: 150%;
@@ -241,7 +239,8 @@
 }
 
 .button__ok {
-  padding-block: 12.5px;
+  grid-column: 1 / -1;
+  padding-block: 8px;
   text-transform: uppercase;
 }
 

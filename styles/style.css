@@ -126,13 +126,18 @@
     inset-block-start: 25px;
     opacity: 0.5;
     mix-blend-mode: hard-light;
-    -webkit-text-stroke: 1px var(--image-label-color, #fff);
+    text-shadow: -1px 0 var(--image-label-color, #fff),
+        0 1px var(--image-label-color, #fff),
+        1px 0 var(--image-label-color, #fff),
+        0 -1px var(--image-label-color, #fff);
     z-index: 1;
 }
 
-@supports (text-stroke: 1px #fff) {
+@supports (text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff) {
     .card__image-label {
+        -webkit-text-stroke: 1px var(--image-label-color, #fff);
         text-stroke: 1px var(--image-label-color, #fff);
+        text-shadow: none;
     }
 }
 

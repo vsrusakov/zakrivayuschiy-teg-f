@@ -11,358 +11,338 @@
 */
 
 .page {
-  font-family: var(--page-font), sans-serif;
-  font-variation-settings: 'wght' var(--page-wght, 410);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  background-image: var(--page-bg);
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  background-size: cover;
-  background-attachment: fixed;
-  padding-block: 100px;
+    font-family: var(--page-font), sans-serif;
+    font-variation-settings: 'wght' var(--page-wght, 410);
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    background-image: var(--page-bg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-block: 100px;
 }
 
 .page:has(.download-window[open]) {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .content-block {
-  inline-size: var(--content-inline-size);
-  margin: 0 auto;
+    inline-size: var(--content-inline-size);
+    margin: 0 auto;
 }
 
 .button {
-  /* display: inline-block; */
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #000;
-  cursor: pointer;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000;
+    cursor: pointer;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
 }
 
 .button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  color: #fff;
-  background-color: #fff;
-  transform: translate(-100%, -10%);
-  transition: transform 0.5s ease-in-out;
-  mix-blend-mode: difference;
+    content: '';
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    color: #fff;
+    background-color: #fff;
+    transform: translate(-100%, -10%);
+    transition: transform 0.5s ease-in-out;
+    mix-blend-mode: difference;
 }
 
 .button:hover::before {
-  transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
 }
 
 .button__text {
-  /* position: relative; */
-  font-family: var(--accent-font, PressStartP2), sans-serif;
-  font-size: 14px;
-  line-height: 90%;
+    font-family: var(--accent-font, PressStartP2), sans-serif;
+    font-size: 14px;
+    line-height: 90%;
 }
 
 .button:focus {
-  outline: none;
+    outline: none;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 currentColor;
+    box-shadow: 2px 2px 0 currentColor;
 }
 
 .header {
-  border: 2px solid #000;
-  background-color: #fff;
-  padding-block: var(--header-padding-block, 122px);
-  font-family: var(--accent-font), sans-serif;
-  text-align: center;
+    border: 2px solid #000;
+    background-color: #fff;
+    padding-block: var(--header-padding-block, 122px);
+    font-family: var(--accent-font), sans-serif;
+    text-align: center;
 }
 
 .header__title {
-  text-transform: uppercase;
-  font-size: var(--header-font-size);
+    text-transform: uppercase;
+    font-size: var(--header-font-size);
 }
 
 .header__logo-text {
-  display: block;
-  font-size: var(--header-logo-font-size);
-  margin-block-end: 20px;
+    display: block;
+    font-size: var(--header-logo-font-size);
+    margin-block-end: 20px;
 }
 
 .main {
-  margin-block-start: 100px;
+    margin-block-start: 100px;
 }
 
 .main__card-list {
-  list-style: none;
-  display: grid;
-  gap: 50px;
+    list-style: none;
+    display: grid;
+    gap: 50px;
 }
 
-/* .main__card-item */
-
 .card {
-  /* width: 100%; */
-  background-color: #fff;
-  font-size: 18px;
-  border: 2px solid #000;
+    background-color: #fff;
+    font-size: 18px;
+    border: 2px solid #000;
 }
 
 .card__title {
-  font-variation-settings: 'wght' 715;
-  font-size: inherit;
-  padding-block: 4px;
-  padding-inline: 10px;
+    font-variation-settings: 'wght' 715;
+    font-size: inherit;
+    padding-block: 4px;
+    padding-inline: 10px;
 }
 
 .card__image-wrapper {
-  position: relative;
-  border-block: 2px solid #000;
-  overflow: hidden;
+    position: relative;
+    border-block: 2px solid #000;
+    overflow: hidden;
 }
 
 .card__image-label {
-  position: absolute;
-  font-family: var(--accent-font), sans-serif;
-  font-size: 14px;
-  inset-inline-end: 25px;
-  inset-block-start: 25px;
-  opacity: .5;
-  mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--image-label-color, #fff);
-  z-index: 1;
+    position: absolute;
+    font-family: var(--accent-font), sans-serif;
+    font-size: 14px;
+    inset-inline-end: 25px;
+    inset-block-start: 25px;
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+    -webkit-text-stroke: 1px var(--image-label-color, #fff);
+    z-index: 1;
 }
 
 @supports (text-stroke: 1px #fff) {
-  .card__image-label {
-     text-stroke: 1px var(--image-label-color, #fff);
-  }
+    .card__image-label {
+        text-stroke: 1px var(--image-label-color, #fff);
+    }
 }
 
 .card__image {
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  inline-size: 100%;
-  /* border-block: 2px solid #000; */
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
 }
 
 .sprint01-start-image {
-  filter: saturate(25%);
+    filter: saturate(25%);
 }
 
 .sprint01-end-image {
-  filter: saturate(300%);
+    filter: saturate(300%);
 }
 
 .sprint02-start-image {
-  filter: hue-rotate(40deg);
+    filter: hue-rotate(40deg);
 }
 
 .sprint02-end-image {
-  filter: invert(0.8);
+    filter: invert(0.8);
 }
 
 .sprint03-start-image {
-  filter: sepia(90%);
+    filter: sepia(90%);
 }
 
 .sprint03-end-image {
-  filter: blur(20px);
+    filter: blur(20px);
 }
 
 .now-im-here-image {
-  --var: 0.5;
-  /* filter: blur(2px) hue-rotate(100deg); */
-  /* filter: hue-rotate(100deg) invert(calc(var(--var) / 2)) brightness(calc(1 + var(--var))) blur(2px); */
-  filter: hue-rotate(100deg) invert(0.25) brightness(calc(1.5)) blur(2px);
+    filter: hue-rotate(100deg) invert(0.25) brightness(calc(1.5)) blur(2px);
 }
 
 .card__content {
-  /* padding: 25px; */
-  margin: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  /* line-height: 116%; */
-  line-height: 117%;
-  /* font-variation-settings: 'wght' var(--page-wght, 410); */
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    line-height: 117%;
 }
 
 .card__footer {
-  margin-inline: 25px;
-  margin-block-end: 25px;
-  border: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 6px;
+    margin-inline: 25px;
+    margin-block-end: 25px;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
 }
 
 .card__icon-button {
-  /* display: inline-block; */
-  border: 2px solid transparent;
-  cursor: pointer;
-  background-color: transparent;
-  max-block-size: 39px;
-  transition: border-color 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    background-color: transparent;
+    max-block-size: 39px;
+    transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus {
-  outline: none;
+    outline: none;
 }
 
 .card__icon-button:focus-visible {
-  border-color: currentColor;
+    border-color: currentColor;
 }
 
 .like-icon {
-  /* fill: #000; */
-  width: 39px;
-  height: 36px;
-  /* transform-origin: center; */
-  /* stroke: #000; */
-  /* stroke-width: 1px; */
+    width: 39px;
+    height: 36px;
 }
 
 .heart {
-  transform-origin: center;
+    transform-origin: center;
 }
 
 .contour {
-  transition: fill 0.1s linear;
+    transition: fill 0.1s linear;
 }
 
 .main-body {
-  transition: fill 0.3s linear;
+    transition: fill 0.3s linear;
 }
 
 .core {
-  transition: fill 0.3s 0.03s linear;
+    transition: fill 0.3s 0.03s linear;
 }
 
 .sparks {
-  opacity: 0;
+    opacity: 0;
 }
 
 .like-icon:hover .core {
-  fill: currentColor;
-  transition-delay: 0s;
+    fill: currentColor;
+    transition-delay: 0s;
 }
 
 .like-icon:hover .main-body {
-  fill: currentColor;
-  transition-delay: 0.05s;
+    fill: currentColor;
+    transition-delay: 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--animation-fill-color);
-  transition-delay: 0s;
+    fill: var(--animation-fill-color);
+    transition-delay: 0s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--animation-fill-color);
-  transition-delay: 0.05s;
+    fill: var(--animation-fill-color);
+    transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--animation-fill-color);
-  transition-delay: 0s;
+    fill: var(--animation-fill-color);
+    transition-delay: 0s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--animation-fill-color);
-  transition-delay: 0.05s;
+    fill: var(--animation-fill-color);
+    transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);
-  transition-duration: 0.3s;
-  transition-delay: 0.06s;
+    fill: var(--animation-fill-color);
+    transition-duration: 0.3s;
+    transition-delay: 0.06s;
 }
 
 .like-icon.is-liked .heart {
-  animation: pulse 0.3s 0.1s ease-in;
+    animation: pulse 0.3s 0.1s ease-in;
 }
 
 .like-icon.is-liked .sparks {
-  animation: appear 0.3s 0.3s ease-in;
+    animation: appear 0.3s 0.3s ease-in;
 }
 
 .card__like-button {
-  padding-inline: 35px;
-  padding-block: 6.5px;
+    padding-inline: 35px;
+    padding-block: 6.5px;
 }
 
 .footer {
-  margin-block-start: 50px;
+    margin-block-start: 50px;
 }
 
 .download-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-inline: 18px;
-  padding-block: 15px;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-inline: 18px;
+    padding-block: 15px;
+    margin: 0 auto;
 }
 
 .floppy-icon {
-  block-size: 21px;
-  inline-size: 21px;
+    block-size: 21px;
+    inline-size: 21px;
 }
 
 .download-window[open] {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  gap: 30px 20px;
-  align-items: center;
-  padding-block: 28px;
-  padding-inline: 28px;
-  inline-size: var(--download-window-inline-size);
-  border: 2px solid #000;
-  border-radius: 0;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 30px 20px;
+    align-items: center;
+    padding-block: 28px;
+    padding-inline: 28px;
+    inline-size: var(--download-window-inline-size);
+    border: 2px solid #000;
+    border-radius: 0;
 }
 
 .download-window[open]::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
+    background-color: rgb(0 0 0 / 0.75);
 }
 
 .download-window__text {
-  font-family: var(--accent-font, PressStartP2), sans-serif;
-  font-size: 14px;
-  line-height: 150%;
-  text-transform: uppercase;
+    font-family: var(--accent-font, PressStartP2), sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
 }
 
 .download-window__floppy-icon {
-  flex-shrink: 0;
-  block-size: 39px;
-  inline-size: 39px;
+    flex-shrink: 0;
+    block-size: 39px;
+    inline-size: 39px;
 }
 
 .button__ok {
-  grid-column: 1 / -1;
-  padding-block: 8px;
-  text-transform: uppercase;
+    grid-column: 1 / -1;
+    padding-block: 8px;
+    text-transform: uppercase;
 }
-
 
 @media (width < 376px) {
-  .download-window[open] {
-    padding-inline: 38px;
-  }
+    .download-window[open] {
+        padding-inline: 38px;
+    }
 
-  .download-button {
-    flex-direction: column;
-  }
+    .download-button {
+        flex-direction: column;
+    }
 
-  .floppy-icon {
-  block-size: 28px;
-  inline-size: 28px;
-}
+    .floppy-icon {
+        block-size: 28px;
+        inline-size: 28px;
+    }
 }

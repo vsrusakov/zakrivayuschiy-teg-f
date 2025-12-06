@@ -47,17 +47,17 @@
     block-size: 100%;
     color: #fff;
     background-color: #fff;
-    transform: translate(-100%, -10%);
+    transform: translateX(-100%);
     transition: transform 0.5s ease-in-out;
     mix-blend-mode: difference;
 }
 
 .button:hover::before {
-    transform: translate(0%, 0%);
+    transform: translateX(0%);
 }
 
 .button__text {
-    font-family: var(--accent-font, PressStartP2), sans-serif;
+    font-family: var(--accent-font, PressStartP2), fantasy;
     font-size: 14px;
     line-height: 90%;
 }
@@ -74,7 +74,7 @@
     border: 2px solid #000;
     background-color: #fff;
     padding-block: var(--header-padding-block, 122px);
-    font-family: var(--accent-font), sans-serif;
+    font-family: var(--accent-font), fantasy;
     text-align: center;
 }
 
@@ -97,6 +97,7 @@
     list-style: none;
     display: grid;
     gap: 50px;
+    margin-block-end: 50px;
 }
 
 .card {
@@ -120,7 +121,7 @@
 
 .card__image-label {
     position: absolute;
-    font-family: var(--accent-font), sans-serif;
+    font-family: var(--accent-font), fantasy;
     font-size: 14px;
     inset-inline-end: 25px;
     inset-block-start: 25px;
@@ -148,31 +149,31 @@
     inline-size: 100%;
 }
 
-.sprint01-start-image {
+.filter-saturate-low {
     filter: saturate(25%);
 }
 
-.sprint01-end-image {
+.filter-saturate-high {
     filter: saturate(300%);
 }
 
-.sprint02-start-image {
+.filter-hue-rotate-40 {
     filter: hue-rotate(40deg);
 }
 
-.sprint02-end-image {
+.filter-negative {
     filter: invert(0.8);
 }
 
-.sprint03-start-image {
+.filter-sepia-high {
     filter: sepia(90%);
 }
 
-.sprint03-end-image {
+.filter-blur-20 {
     filter: blur(20px);
 }
 
-.now-im-here-image {
+.filter-hue-white-overlay-blur {
     filter: hue-rotate(100deg) invert(0.25) brightness(calc(1.5)) blur(2px);
 }
 
@@ -280,12 +281,8 @@
 }
 
 .card__like-button {
-    padding-inline: 35px;
+    min-inline-size: 130px;
     padding-block: 6.5px;
-}
-
-.footer {
-    margin-block-start: 50px;
 }
 
 .download-button {
@@ -319,7 +316,7 @@
 }
 
 .download-window__text {
-    font-family: var(--accent-font, PressStartP2), sans-serif;
+    font-family: var(--accent-font, PressStartP2), fantasy;
     font-size: 14px;
     line-height: 150%;
     text-transform: uppercase;

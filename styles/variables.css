@@ -15,4 +15,6 @@
   --header-padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   --image-label-color: #fff;
   --download-window-inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  --like-contour-color: #000;
+  --animation-fill-color: #f00;
 }
